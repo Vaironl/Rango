@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Rango - About</title>
+		<link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+	</head>
+	<body>
+
+		<h1>Rango says...</h1>
+		<div>
+			This is the about page<br/>
+			<strong>{{ aboutmessage }}</strong><br />
+		</div>
+		<h2>This tutorial has been put together by Vairon M</h2>
+
+		<div>
+			<a href="/rango/">Index Page</a> <br/>
+			<img src="{% static "images/info.jpg" %}" alt="picture of rango">
+		</div>
+	</body>
+</html>
