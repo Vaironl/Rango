@@ -1,5 +1,18 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.contrib.auth.models import User
+
+
+class UserProfile(models.Model):
+    # Links UserProfile to a user model instance
+    user = models.OneToOneField(User)
+
+    # Additional attributes we want to use
+    website = models.URLField(blank=True)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
+
+    def __str__(self):
+        return self.user.username
 
 
 # Create your models here.
